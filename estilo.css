@@ -1,0 +1,39 @@
+p {
+    text-align: justify;
+    text-indent: 50px;
+}
+
+.foto-legenda {
+    max-width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: inline-block; /* Para que o contêiner tenha o tamanho da imagem */
+}
+
+figure.foto-legenda img {
+    max-width: 100%;
+    height: auto; /* Mantém a proporção da imagem */
+    border: 5px solid #000; /* Adicione uma borda se necessário */
+    box-sizing: border-box; /* Inclui a borda no cálculo da largura e altura */
+    display: block; /* Remove espaço extra abaixo da imagem */
+}
+
+figure.foto-legenda figcaption {
+    opacity: 0;
+    position: absolute;
+    top: 0;
+    left: 0; /* Garante que a legenda comece na parte esquerda */
+    right: 0; /* Garante que a legenda termine na parte direita */
+    bottom: 0; /* Garante que a legenda termine na parte inferior */
+    background-color: rgba(0, 0, 0, 0.55);
+    color: white;
+    display: flex;
+    align-items: center; /* Centraliza o texto verticalmente */
+    justify-content: center; /* Centraliza o texto horizontalmente */
+    text-align: center;
+    transition: opacity 0.3s; /* Transição suave para a opacidade */
+}
+
+figure.foto-legenda:hover figcaption {
+    opacity: 1; /* Exibe a legenda ao passar o mouse */
+}
